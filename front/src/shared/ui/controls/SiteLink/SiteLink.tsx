@@ -18,7 +18,9 @@ export const SiteLink: FC<SiteLinkProps> = ({
     <NavLink
       to={path}
       className={({ isActive }) =>
-        `text-[15px] whitespace-nowrap ${className} ` + (isActive ? 'text-primary' : '')
+        `text-[14px] font-semibold whitespace-nowrap ${className} ${
+          isActive ? 'text-activeLink' : 'text-inactiveLink'
+        }`
       }
     >
       {icon}

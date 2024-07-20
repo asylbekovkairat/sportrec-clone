@@ -18,6 +18,8 @@ export default {
         content: '#fff',
         stroke: '#8b8b8b',
         gr: '#4f679b',
+        activeLink: '#06082C',
+        inactiveLink: '#9395B8',
       },
     },
     screens: {

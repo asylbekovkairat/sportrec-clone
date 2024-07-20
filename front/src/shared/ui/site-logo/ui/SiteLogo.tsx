@@ -16,7 +16,6 @@ export function SiteLogo() {
   return (
     <Link to={RoutesUrls.mon} target="_blank" className={styles.wrapper}>
       <img className={styles.logo} src={SiteLogotype} alt="logo" />
-      <h2 className={titleClassName}>{t('mainSiteName')}</h2>
     </Link>
   );
 }

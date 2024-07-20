@@ -94,7 +94,7 @@ export default ({ mode }: { mode: string }) => {
         ...srcAliases,
       },
     },
-    base: '/project-uniq-name/',
+    // base: '/project-uniq-name/',
     server: {
       port: 3000,
     },

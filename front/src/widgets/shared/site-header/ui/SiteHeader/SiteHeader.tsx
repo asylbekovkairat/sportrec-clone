@@ -1,11 +1,22 @@
-import { FC } from 'react';
+import { FC, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
 import { SetRegistrationView } from '~features/shared/locale';
 import { RoutesUrls } from '~shared/lib/router';
 
-import { Header, SiteLogo } from '~shared/ui';
+import {
+  CupIcon,
+  Header,
+  HomeIcon,
+  LiveIcon,
+  OrganizationIcon,
+  ShopIcon,
+  SiteLink,
+  SiteLogo,
+  UsersIcon,
+} from '~shared/ui';
+import { INavTabItem } from '~widgets/shared/navigation';
 
 export interface SiteHeaderProps extends Partial<ComponentWithChild> {}
 
@@ -13,31 +24,55 @@ export const SiteHeader: FC<SiteHeaderProps> = () => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
 
+  const routes: INavTabItem[] = [
+    {
+      title: 'Лента',
+      icon: <HomeIcon />,
+      isTabBar: true,
+      path: RoutesUrls.root,
+    },
+    {
+      title: 'Маркетплейс',
+      icon: <ShopIcon />,
+      isTabBar: true,
+      path: RoutesUrls.login,
+    },
+    {
+      title: 'Рейтинги',
+      icon: <UsersIcon />,
+      isTabBar: true,
+      path: RoutesUrls.login,
+    },
+    {
+      title: 'Соревнования',
+      icon: <CupIcon />,
+      isTabBar: true,
+      path: RoutesUrls.login,
+    },
+    {
+      title: 'Организации',
+      icon: <OrganizationIcon />,
+      isTabBar: true,
+      path: RoutesUrls.login,
+    },
+    {
+      title: 'Live',
+      icon: <LiveIcon />,
+      isTabBar: true,
+      path: RoutesUrls.login,
+    },
+  ];
+
+  const renderNavLinks = routes.map((route) => (
+    <SiteLink key={route.path} className="flex items-center gap-5" {...route} />
+  ));
+
   return (
     <Header className="mx-auto">
       <div className="flex justify-between w-full items-center">
         <SiteLogo />
       </div>
-      <div className="flex items-center gap-4">
-        <div className="flex gap-2">
-          <SetRegistrationView />
-        </div>
-        {RoutesUrls.root === pathname ? (
-          <Link
-            to={RoutesUrls.login}
-            className="text-black hover:text-[#4f679b] w-16 inline-block text-center"
-          >
-            {t('routes.login')}
-          </Link>
-        ) : (
-          <Link
-            to={RoutesUrls.root}
-            className="text-black hover:text-[#4f679b] w-16 inline-block text-center"
-          >
-            {t('routes.main')}
-          </Link>
-        )}
-      </div>
+      <div className="flex items-center gap-[32px]">{renderNavLinks}</div>
     </Header>
   );
 };
