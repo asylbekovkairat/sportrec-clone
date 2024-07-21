@@ -1,5 +1,4 @@
 export const RoutesUrls = {
-  mon: 'https://edu.gov.kg/',
   root: `/`,
   login: `/login`,
   cabinet: `/cabinet`,

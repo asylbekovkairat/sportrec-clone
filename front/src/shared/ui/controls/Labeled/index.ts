@@ -1,1 +1,0 @@
-export { Labeled } from './Labeled';

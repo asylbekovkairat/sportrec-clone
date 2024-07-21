@@ -1,13 +1,9 @@
 import React, { Suspense, lazy } from 'react';
 
-import { Skeleton, Spin } from '~shared/ui';
-
 function LoadingDisplay() {
   return (
     <div className="min-h-[60dvh] flex items-center justify-center">
-      <Spin size="large">
-        <Skeleton active />
-      </Spin>
+      <h1>Loading...</h1>
     </div>
   );
 }

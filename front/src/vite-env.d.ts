@@ -8,6 +8,7 @@ interface ImportMetaEnv {
   readonly VITE_API_FILESTORAGE_URL: string;
   readonly VITE_TOKEN_NAME: string;
   readonly VITE_TOKEN_TTL: string;
+  readonly VITE_DB_ANON: string;
 }
 
 interface ImportMeta {

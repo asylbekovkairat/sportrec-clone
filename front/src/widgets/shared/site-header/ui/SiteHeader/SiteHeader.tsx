@@ -1,8 +1,8 @@
-import { FC, useMemo } from 'react';
+import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
-import { SetRegistrationView } from '~features/shared/locale';
+import { SetLocaleView } from '~features/shared/locale';
 import { RoutesUrls } from '~shared/lib/router';
 
 import {
@@ -68,11 +68,15 @@ export const SiteHeader: FC<SiteHeaderProps> = () => {
   ));
 
   return (
-    <Header className="mx-auto">
-      <div className="flex justify-between w-full items-center">
+    <Header className="mx-auto justify-between">
+      <div className="flex justify-between items-center">
         <SiteLogo />
       </div>
       <div className="flex items-center gap-[32px]">{renderNavLinks}</div>
+
+      <div className="flex">
+        <SetLocaleView />
+      </div>
     </Header>
   );
 };

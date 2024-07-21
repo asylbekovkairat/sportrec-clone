@@ -14,7 +14,7 @@ export function SiteLogo() {
   const titleClassName = `${styles.title} ${i18n.language === 'ru' ? 'w-[260px]' : 'w-[280px]'}`;
 
   return (
-    <Link to={RoutesUrls.mon} target="_blank" className={styles.wrapper}>
+    <Link to={RoutesUrls.root} target="_blank" className={styles.wrapper}>
       <img className={styles.logo} src={SiteLogotype} alt="logo" />
     </Link>
   );

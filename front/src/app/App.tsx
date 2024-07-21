@@ -1,9 +1,7 @@
-import { ConfigProvider } from 'antd';
-import ru_RU from 'antd/lib/locale/ru_RU';
 import { useEffect, useState } from 'react';
 
 import { Router } from '~pages';
-import { useNotification, useWindowInnerWidth } from '~shared/ui';
+import { useWindowInnerWidth } from '~shared/ui';
 
 import { withProviders } from './providers';
 import { AppProps } from './types';
@@ -17,7 +15,6 @@ import './styles/tailwind.scss';
 const App: React.FC<AppProps> = () => {
   const [innerHigth, setInnerHigth] = useState<number | string>('100%');
   const windowWidth = useWindowInnerWidth();
-  const notification = useNotification();
 
   useEffect(() => {
     if (windowWidth <= 768) {
@@ -104,10 +101,7 @@ const App: React.FC<AppProps> = () => {
 
   return (
     <div style={{ maxHeight: innerHigth }} className="h-full">
-      <ConfigProvider theme={antdTheme} locale={ru_RU}>
-        <Router />
-      </ConfigProvider>
-      {notification.contextHolder}
+      <Router />
     </div>
   );
 };
