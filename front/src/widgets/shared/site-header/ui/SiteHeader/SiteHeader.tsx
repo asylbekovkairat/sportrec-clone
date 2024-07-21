@@ -1,11 +1,12 @@
+import { Avatar } from '@mui/material';
 import { FC } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Link, useLocation } from 'react-router-dom';
 
 import { SetLocaleView } from '~features/shared/locale';
 import { RoutesUrls } from '~shared/lib/router';
 
 import {
+  BellIcon,
+  ChevronDowmIcon,
   CupIcon,
   Header,
   HomeIcon,
@@ -21,9 +22,6 @@ import { INavTabItem } from '~widgets/shared/navigation';
 export interface SiteHeaderProps extends Partial<ComponentWithChild> {}
 
 export const SiteHeader: FC<SiteHeaderProps> = () => {
-  const { t } = useTranslation();
-  const { pathname } = useLocation();
-
   const routes: INavTabItem[] = [
     {
       title: 'Лента',
@@ -74,8 +72,17 @@ export const SiteHeader: FC<SiteHeaderProps> = () => {
       </div>
       <div className="flex items-center gap-[32px]">{renderNavLinks}</div>
 
-      <div className="flex">
+      <div className="flex items-center gap-6">
         <SetLocaleView />
+        <BellIcon className="cursor-pointer" />
+        <div className="flex items-center gap-1">
+          <Avatar
+            className="cursor-pointer"
+            alt="Avatar"
+            src="https://mui.com/static/images/avatar/1.jpg"
+          />
+          <ChevronDowmIcon className="cursor-pointer" />
+        </div>
       </div>
     </Header>
   );

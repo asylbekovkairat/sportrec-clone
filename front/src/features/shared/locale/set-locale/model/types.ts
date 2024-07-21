@@ -1,6 +1,5 @@
 export enum LocaleCodes {
-  // ENGLISH = 'en',
-  KYRGYZ = 'ky',
+  ENGLISH = 'en',
   RUSSIAN = 'ru',
 }
 

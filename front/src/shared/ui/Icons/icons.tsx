@@ -197,6 +197,46 @@ export const ShopIcon = () => (
   </svg>
 );
 
+export const BellIcon = ({ ...props }) => (
+  <svg
+    {...props}
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7.79545 17.5013C8.38306 18.0199 9.15493 18.3346 10.0003 18.3346C10.8457 18.3346 11.6175 18.0199 12.2052 17.5013M15.0003 6.66797C15.0003 5.34189 14.4735 4.07012 13.5358 3.13243C12.5982 2.19475 11.3264 1.66797 10.0003 1.66797C8.67422 1.66797 7.40245 2.19475 6.46477 3.13243C5.52708 4.07012 5.0003 5.34189 5.0003 6.66797C5.0003 9.24312 4.35069 11.0063 3.62502 12.1725C3.01291 13.1562 2.70685 13.6481 2.71807 13.7853C2.7305 13.9372 2.76268 13.9951 2.88511 14.086C2.99568 14.168 3.49413 14.168 4.49101 14.168H15.5096C16.5065 14.168 17.0049 14.168 17.1155 14.086C17.2379 13.9951 17.2701 13.9372 17.2825 13.7853C17.2938 13.6481 16.9877 13.1562 16.3756 12.1725C15.6499 11.0063 15.0003 9.24312 15.0003 6.66797Z"
+      stroke="#9395B8"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const RussiaIcon = () => (
+  <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_9206_2807)">
+      <path
+        d="M17.7778 0H2.22222C0.995 0 0 1.194 0 2.66667V5.33333H20V2.66667C20 1.194 19.005 0 17.7778 0Z"
+        fill="#EEEEEE"
+      />
+      <path d="M0 5.33203H20V10.6654H0V5.33203Z" fill="#22408C" />
+      <path
+        d="M20 13.3346C20 14.8073 19.005 16.0013 17.7778 16.0013H2.22222C0.995 16.0013 0 14.8073 0 13.3346V10.668H20V13.3346Z"
+        fill="#CE2028"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_9206_2807">
+        <rect width="20" height="16" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
 export const UsersIcon = () => (
   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -637,6 +677,25 @@ export const ChevronLeftlIcon = () => (
     <path
       d="M17 20L12 15L17 10"
       stroke="#3F139D"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const ChevronDowmIcon = ({ ...props }) => (
+  <svg
+    {...props}
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5 7.5L10 12.5L15 7.5"
+      stroke="#9395B8"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
