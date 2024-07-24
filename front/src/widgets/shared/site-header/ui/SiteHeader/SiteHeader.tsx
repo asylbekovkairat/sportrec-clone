@@ -66,7 +66,7 @@ export const SiteHeader: FC<SiteHeaderProps> = () => {
   ));
 
   return (
-    <Header className="mx-auto justify-between">
+    <Header className="justify-between">
       <div className="flex justify-between items-center">
         <SiteLogo />
       </div>

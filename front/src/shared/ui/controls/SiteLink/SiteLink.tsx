@@ -19,7 +19,7 @@ export const SiteLink: FC<SiteLinkProps> = ({
       to={path}
       className={({ isActive }) =>
         `text-[14px] font-semibold whitespace-nowrap ${className} ${
-          isActive ? 'text-activeLink' : 'text-inactiveLink'
+          isActive ? 'text-primary' : 'text-inactiveLink'
         }`
       }
     >

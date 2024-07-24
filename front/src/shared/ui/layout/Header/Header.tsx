@@ -16,10 +16,14 @@ export const Header: FC<HeaderProps> = ({ children, className = '' }) => {
   const windowWidth = useWindowInnerWidth();
 
   const headerClass = classNames(
-    styles.wrapper,
+    styles.content,
     windowWidth <= 768 && scroll.y > 150 && scroll.y - scroll.lastY > 0 ? styles.hidden : '',
     className
   );
 
-  return <div className={headerClass}>{children}</div>;
+  return (
+    <header className={styles.wrapper}>
+      <div className={headerClass}>{children}</div>
+    </header>
+  );
 };

@@ -1,20 +1,16 @@
 .PageLayout {
   padding: 0;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
-  padding: 20px;
-  max-width: 1880px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  position: relative;
-  scroll-behavior: smooth;
-  height: calc(100% - 80px);
+  background-color: var(--bg);
+  max-width: 1352px;
+  width: 100%;
+  margin: auto;
 }
 
 @media screen and (max-width: 1024px) {

@@ -3,6 +3,8 @@ export const RoutesUrls = {
   login: `/login`,
   cabinet: `/cabinet`,
 
+  organization: '/organization/:id',
+
   settings: `/cabinet/settings`,
 
   logout: `/cabinet/logout`,
